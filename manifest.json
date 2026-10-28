@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "IVASMS Live SMS → Telegram",
+  "version": "1.0",
+  "description": "Monitor IVASMS Live SMS table and forward new rows to Telegram.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ivasms.com/portal/live/my_sms*",
+        "https://www.ivasms.com/portal/live/my_sms*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
